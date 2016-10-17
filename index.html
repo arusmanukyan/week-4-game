@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>CrytalsCollector Game</title>
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<body>
+	<h1>CrytalsCollector</h1>
+
+	<ul class="list">
+		<li id="first">You will be given a random number at the start of the game.</li>
+	
+		<li id="second">There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+	
+		<li id="third">You win the game by matching your total score to random number, you lose the game if your total score goes above the random number. </li>
+
+		<li id="forth">The value of each crytal is hidden from you until you click on it. </li>
+
+		<li id="fifth">Each time when the game starts, the game will change the value of each crytal.</li>
+	</ul>
+	<section class="score">
+		<div id="randomNumber">Random Number: </div >
+		<div  id="wins">Wins:</div >
+		<div  id="loses">Loses:</div >
+	</section>
+
+	<div id="crytals">
+		<a class="darkBlue"><img src="assets/images/diamond-clip-art-Diamond-clip-art-5.png" alt="Dark Blue"></a>
+		<a class="hotPink"><img src="assets/images/diamond-clip-art-Diamond-clip-art-6.png" alt="Hot Pink"></a>
+		<a class="lightBlue"><img src="assets/images/kTMnAMbMc.png" alt="Blue"></a>
+		<a class="lightPink"><img src="assets/images/pink-diamond-clip-art-diamant-diamond-hi.png" alt="Light Pink"></a>
+	</div>
+	<section class="bottomSection">
+		<div id="yourScore">
+			<h2> Your score:</h2>
+		</div>
+	</section>
+
+<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
