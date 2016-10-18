@@ -1,61 +1,82 @@
 $(document).ready(function(){
 
-	var wins = 0;
-	var loses = 0;
 	var counter = 0;
-	var yourGuess = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+	var crystalOne = 0;
+	var crystalTwo = 0;
+	var crystalThree = 0;
+	var crystalFour = 0;
+	var yourGuess = [10, 5, 3, 1];
 
 	// add random number to #randomNumber
 	var randomNumber = Math.floor((Math.random() * 100) + 19);
 		$("#randomNumber").append(randomNumber);
-	var darkBlueNumber = yourGuess[Math.floor(Math.random() * yourGuess.length)];
-	var hotPinkNumber = yourGuess[Math.floor(Math.random() * yourGuess.length)];
-	var lightBlueNumber = yourGuess[Math.floor(Math.random() * yourGuess.length)];
-	var lightPinkNumber = yourGuess[Math.floor(Math.random() * yourGuess.length)];
-
-
+	
+	var darkBlueNumber;
+	var hotPinkNumber;
+	var lightBlueNumber;
+	var lightPinkNumber;
 
 	// on click dark blue adds random number from yourGuess
 		$(".darkBlue").on("click", function(){
-				counter = $(this).attr("value");
-			$("#yourScore").append(darkBlueNumber);
-			console.log(darkBlueNumber);
+			if (crystalOne === 0){
+				darkBlueNumber = yourGuess[Math.floor(Math.random()*yourGuess.length)];
+				$(".darkBlue").val(darkBlueNumber);
+			    console.log($(".darkBlue").val());
+			    crystalOne = 1;
+			}
+		counter = counter + (darkBlueNumber);	
+		$("#yourScore").text("Your Score: " + counter);
+			console.log(counter);
 		
 	});	
 	// on click hot pink adds random number from yourGuess
 		$(".hotPink").on("click", function(){
-			counter = $(this).attr("value");
-			$("#yourScore").append(hotPinkNumber);
-			console.log(hotPinkNumber);
+			if (crystalTwo === 0){
+				hotPinkNumber = yourGuess[Math.floor(Math.random()*yourGuess.length)];
+				$(".hotPink").val(hotPinkNumber);
+			    console.log($(".hotPink").val());
+			    crystalTwo = 1;
+			}
+		counter = counter + (hotPinkNumber);	
+		$("#yourScore").text("Your Score: " + counter);
+			console.log(counter);
 
 	});
 	// on click light blue adds random number from yourGuess
 		$(".lightBlue").on("click", function(){
-			counter = $(this).attr("value");
-			$("#yourScore").append(lightBlueNumber);
-			console.log(lightBlueNumber);
+			if (crystalThree === 0){
+				lightBlueNumber = yourGuess[Math.floor(Math.random()*yourGuess.length)];
+				$(".lightBlue").val(lightBlueNumber);
+			    console.log($(".lightBlue").val());
+			    crystalThree = 1;
+			}
+		counter = counter + (lightBlueNumber);	
+		$("#yourScore").text("Your Score: " + counter);
+			console.log(counter);
 		
 	});
 	// on click light pink adds random number from yourGuess
 		$(".lightPink").on("click", function(){
-			counter = $(this).attr("value");
-			$("#yourScore").append(lightPinkNumber);
-			console.log(lightPinkNumber);
-	
+			if (crystalFour === 0){
+				lightPinkNumber = yourGuess[Math.floor(Math.random()*yourGuess.length)];
+				$(".lightPink").val(lightPinkNumber);
+			    console.log($(".lightPink").val());
+			    crystalFour = 1;
+			}
+		counter = counter + (lightPinkNumber);	
+		$("#yourScore").text("Your Score: " + counter);
+			console.log(counter);
 	});
-		if (counter == randomNumber){
-               wins = +1;
-               $("#wins").html(wins);
-            }
-
-            // If the numbers did not match. You also let them know
-            else {
-                loses = +1;
-                $("#loses").html(loses);
-            }            
-
-
 	
-
+		if (counter === randomNumber){
+		  alert("You Won!") && $("#win" + 1);
+			}else{
+				if (counter > randomNumber){
+				alert("you lose!") && $("#lose" + 1);
+			}
+	}
 });
+
+
+
 
