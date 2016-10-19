@@ -9,12 +9,12 @@ h1 {
 	font-size: 60px;
 	color: #000080;
 	line-height: 49px;
-	border-bottom: 10px solid #B0C4DE;
+	border-bottom: 10px solid black;
 	padding-bottom: 20px;
 }
 
 .list{
-	background-color: #FAF0E6;
+	
 	color: #000000;
 	position: relative;
 	width: 55%;
@@ -25,7 +25,8 @@ img {
     width: 20%;
 }
 .score{
-	background-color: #FAF0E6;
+	border: solid;
+	padding: 15px;
 	color: black;
     width: 400px;
     height: 200px;
@@ -33,7 +34,7 @@ img {
 }
 
 #yourScore{
-	background-color: #FAF0E6;
+	
 	width: 200px;
-	height: 200px;
+	height: 100px;
 }
